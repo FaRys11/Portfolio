@@ -5,12 +5,13 @@ import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { services } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
+import { SectionWrapper } from '../hoc';
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
     <Tilt className="xs:w-[250px] w-full">
       <motion.div
-        variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
+        variants={fadeIn("left", "spring", 0.5 * index, 0.75)}
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"      
       >
         <div
@@ -43,7 +44,7 @@ const About = () => {
         varriants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        Jsem začínající programator, který se převážně věnuje 3D, 2D návrhům webových aplikací a webových stránek. Využívám programovací jazyk JavaScript. Mám zkušenosti s frameworky, jako jsou React, Node.js a Three.js. Učím se rychle a úzce spolupracuji s klientem.
+        Jsem začínající programator, který se chce věnovat 3D, 2D návrhům webových aplikací a webových stránek. V oblibě mám programovací jazyk JavaScript. Mám zkušenosti s frameworky, jako jsou React, Node.js a Three.js. Učím se rychle a rád hledám možnosti, jak věci zlepšit. Tak pojďme do to!
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
@@ -55,4 +56,4 @@ const About = () => {
   )
 }
 
-export default About
+export default SectionWrapper (About, "about")
