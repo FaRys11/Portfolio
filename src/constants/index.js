@@ -50,12 +50,12 @@ import {
       icon: mobile,
     },
     {
-      title: "Backend Developer",
-      icon: backend,
+      title: "React Native Developer",
+      icon: creator,
     },
     {
-      title: "Content Creator",
-      icon: creator,
+      title: "Backend Developer",
+      icon: backend,
     },
   ];
   

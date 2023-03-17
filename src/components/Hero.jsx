@@ -19,7 +19,7 @@ const Hero = () => {
             Já jsem <span className='text-[#915EFF]'>Martin</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            Vyvýjím 3D a 2D vyzualizace uživatelské <br className='sm:block hidden' />
+            Vyvýjím 3D a 2D vyzualizace uživatelského <br className='sm:block hidden' />
             rozhraní aplikací a webových stránek.
           </p>
         </div>
