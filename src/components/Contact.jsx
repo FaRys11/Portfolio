@@ -8,6 +8,7 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
 
+
 const Contact = () => {
   const formRef = new useRef();
   const [form, setForm] = useState({
@@ -18,9 +19,49 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {}
+  const handleChange = (e) => {
+    const { name, value } = e.target;
 
-  const handleSubmit = (e) => {}
+    setForm( {...form, [name]: value })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    //98-AFpxu5MhvW4doj
+    //template_z4tclj9
+    //service_k2frwso
+
+    emailjs.send(
+      'service_k2frwso', 
+      'template_z4tclj9',
+      {
+        from_name: form.name,
+        to_name: 'Martin',
+        from_email: form.email,
+        to_email: 'gott45@seznam.cz',
+        message: form.message,
+      },
+      '98-AFpxu5MhvW4doj'
+      )
+      .then(() => {
+        setLoading(false);
+        alert('Děkuji Vám za zprávu. Ozvu se Vám co nejdříve.');
+
+        setForm({
+          name: '',
+          email: '',
+          message: '',
+        })
+      }, (error) => {
+        setLoading(false);
+
+        console.log(error);
+
+        alert('Něco bylo špatně.')
+      })
+  }
 
   return (
     <div
@@ -76,7 +117,7 @@ const Contact = () => {
             type='submit'
             className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
           >
-            {loading ? "Odesílání..." : "Odesláno"}
+            {loading ? "Odesílání..." : "Odešli"}
           </button>
         </form>
       </motion.div>
