@@ -29,10 +29,6 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    //98-AFpxu5MhvW4doj
-    //template_z4tclj9
-    //service_k2frwso
-
     emailjs.send(
       'service_k2frwso', 
       'template_z4tclj9',
