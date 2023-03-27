@@ -144,7 +144,7 @@ import {
     {
       name: "Projekt z rekvalifikace ITnetwork",
       description:
-        "Webová aplikace, která vypisuje tabulku z formuláře a ukládá ji do paměti u uživatele. V rámci zpracování bylo použito OOP",
+        "Webová aplikace, která vypisuje tabulku z formuláře a ukládá ji do paměti u uživatele. V rámci zpracování bylo použito OOP.",
       tags: [
         {
           name: "Javascript",
@@ -165,7 +165,7 @@ import {
     {
       name: "Vlastní portfolio",
       description:
-        "Moje vlastní protfolio s využitím three.js. Interaktivní modely a plně responzivní webová stránka",
+        "Moje vlastní protfolio s využitím three.js. Jedná se o plně responzivní webovou stránku s interaktivnímy modely.",
       tags: [
         {
           name: "React",
