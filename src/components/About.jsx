@@ -49,7 +49,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        Jsem začínající programator, který se chce věnovat 3D, 2D návrhům webových aplikací a webových stránek. V oblibě mám programovací jazyk JavaScript. Mám zkušenosti s frameworky, jako jsou React, Node.js a Three.js. Učím se rychle a rád hledám možnosti, jak se zlepšit. Tak pojďme do to!
+        Jsem začínající programator, který se věnuje 3D, 2D návrhům webových aplikací a webových stránek. V oblibě mám programovací jazyk JavaScript. Mám zkušenosti s frameworky, jako jsou React, Node.js a Three.js. Učím se rychle a rád hledám možnosti, jak se zlepšit. Tak pojďme do to!
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
