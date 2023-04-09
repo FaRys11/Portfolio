@@ -10,7 +10,7 @@ import { slideIn } from "../utils/motion";
 
 
 const Contact = () => {
-  const formRef = new useRef();
+  const formRef = useRef();
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -27,6 +27,12 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!form.name || !form.email || !form.message) {
+      alert('Prosím, vyplňte všechna pole formuláře.');
+      return;
+    }
+
     setLoading(true);
 
     emailjs.send(
@@ -128,4 +134,4 @@ const Contact = () => {
   );
 };
 
-export default SectionWrapper(Contact, "contact");
+export default SectionWrapper(Contact, "contact")
